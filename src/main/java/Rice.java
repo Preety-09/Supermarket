@@ -4,4 +4,8 @@ public class Rice {
     public Rice(double quantity) {
         this.quantity = quantity;
     }
+
+    public double selectQuantity() {
+        return quantity;
+    }
 }
