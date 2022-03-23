@@ -30,7 +30,7 @@ public class supermarketTest {
 
         String supermarketWithCheapestPriceForAllProducts = supermarket.findSupermarketWithCheapestPriceForAllProducts();
 
-        assertThat(supermarketWithCheapestPriceForAllProducts, is("Supermarket2"));
+        assertThat(supermarketWithCheapestPriceForAllProducts, is("Supermarket1"));
 
     }
 }
