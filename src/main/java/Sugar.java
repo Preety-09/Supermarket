@@ -4,4 +4,8 @@ public class Sugar {
     public Sugar(double quantity) {
         this.quantity = quantity;
     }
+
+    public double selectQuantity() {
+        return quantity;
+    }
 }
