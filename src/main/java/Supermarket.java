@@ -12,12 +12,12 @@ public class Supermarket {
         this.sugar = sugar;
     }
 
-    public List<String> findSupermarketWithCheapestPrice() {
-        List<String> listOfSupermarketWithCheapestPrice = new ArrayList<>();
-        listOfSupermarketWithCheapestPrice.add(Supermarket1.BREAD_UNIT_PRICE.getUnitPrice() > Supermarket2.BREAD_UNIT_PRICE.getUnitPrice() ? "Supermarket2" : "Supermarket1");
-        listOfSupermarketWithCheapestPrice.add(Supermarket1.RICE_UNIT_PRICE.getUnitPrice() > Supermarket2.RICE_UNIT_PRICE.getUnitPrice() ? "Supermarket2" : "Supermarket1");
-        listOfSupermarketWithCheapestPrice.add(Supermarket1.SUGAR_UNIT_PRICE.getUnitPrice() > Supermarket2.SUGAR_UNIT_PRICE.getUnitPrice() ? "Supermarket2" : "Supermarket1");
+    public List<String> findSupermarketWithCheapestPriceForEachProduct() {
+        List<String> listOfSupermarketWithCheapestPriceForEachProduct = new ArrayList<>();
+        listOfSupermarketWithCheapestPriceForEachProduct.add(Supermarket1.BREAD_UNIT_PRICE.getUnitPrice() > Supermarket2.BREAD_UNIT_PRICE.getUnitPrice() ? "Supermarket2" : "Supermarket1");
+        listOfSupermarketWithCheapestPriceForEachProduct.add(Supermarket1.RICE_UNIT_PRICE.getUnitPrice() > Supermarket2.RICE_UNIT_PRICE.getUnitPrice() ? "Supermarket2" : "Supermarket1");
+        listOfSupermarketWithCheapestPriceForEachProduct.add(Supermarket1.SUGAR_UNIT_PRICE.getUnitPrice() > Supermarket2.SUGAR_UNIT_PRICE.getUnitPrice() ? "Supermarket2" : "Supermarket1");
 
-        return listOfSupermarketWithCheapestPrice;
+        return listOfSupermarketWithCheapestPriceForEachProduct;
     }
 }
