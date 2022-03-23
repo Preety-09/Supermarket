@@ -19,4 +19,9 @@ public class supermarketTest {
         assertEquals(expectedListOfSupermarketWithCheapestPrice, listOfSupermarketWithCheapestPrice);
 
     }
+
+    @Test
+    void returnSupermarketThatProvidesCheapestPriceForAllProducts() {
+
+    }
 }
