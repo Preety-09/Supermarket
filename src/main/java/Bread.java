@@ -4,4 +4,9 @@ public class Bread {
     public Bread(double quantity) {
         this.quantity = quantity;
     }
+
+
+    public double selectQuantity() {
+        return quantity;
+    }
 }
