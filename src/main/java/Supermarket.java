@@ -22,6 +22,17 @@ public class Supermarket {
     }
 
     public String findSupermarketWithCheapestPriceForAllProducts() {
-        return null;
+
+        double totalPriceOfProductsFromSupermarket1 =
+                bread.selectQuantity() * Supermarket1.BREAD_UNIT_PRICE.getUnitPrice() +
+                        rice.selectQuantity() * Supermarket1.RICE_UNIT_PRICE.getUnitPrice() +
+                        sugar.selectQuantity() * Supermarket1.SUGAR_UNIT_PRICE.getUnitPrice();
+
+        double totalPriceOfProductsFromSupermarket2 =
+                bread.selectQuantity() * Supermarket2.BREAD_UNIT_PRICE.getUnitPrice() +
+                        rice.selectQuantity() * Supermarket2.RICE_UNIT_PRICE.getUnitPrice() +
+                        sugar.selectQuantity() * Supermarket2.SUGAR_UNIT_PRICE.getUnitPrice();
+
+        return (totalPriceOfProductsFromSupermarket1 < totalPriceOfProductsFromSupermarket2 ? "Supermarket1" : "Supermarket2");
     }
 }
