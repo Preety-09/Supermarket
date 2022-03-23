@@ -20,4 +20,8 @@ public class Supermarket {
 
         return listOfSupermarketWithCheapestPriceForEachProduct;
     }
+
+    public String findSupermarketWithCheapestPriceForAllProducts() {
+        return null;
+    }
 }
