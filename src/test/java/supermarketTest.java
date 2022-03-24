@@ -36,6 +36,14 @@ public class supermarketTest {
 
     @Test
     void returnSuperMarketThatProvidesCheapestPriceForAllProductsIncludingServiceCharges() {
+        Bread bread = new Bread(2);
+        Rice rice = new Rice(10);
+        Sugar sugar = new Sugar(5);
+        Supermarket supermarket = new Supermarket(bread, rice, sugar);
+
+        double cheapestPrice = supermarket.calculateCheapestPriceOfProductsIncludingServicecharge();
+
+        assertEquals(883, cheapestPrice);
 
     }
 }
