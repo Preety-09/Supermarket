@@ -33,4 +33,9 @@ public class supermarketTest {
         assertThat(supermarketWithCheapestPriceForAllProducts, is("Supermarket1"));
 
     }
+
+    @Test
+    void returnSuperMarketThatProvidesCheapestPriceForAllProductsIncludingServiceCharges() {
+
+    }
 }
