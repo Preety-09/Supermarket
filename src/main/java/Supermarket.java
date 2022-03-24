@@ -47,4 +47,8 @@ public class Supermarket {
                 rice.selectQuantity() * Supermarket1.RICE_UNIT_PRICE.getUnitPrice() +
                 sugar.selectQuantity() * Supermarket1.SUGAR_UNIT_PRICE.getUnitPrice();
     }
+
+    public double calculateCheapestPriceOfProductsIncludingServicecharge() {
+        return 0;
+    }
 }
