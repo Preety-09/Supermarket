@@ -14,8 +14,12 @@ public class Supermarket {
 
     public List<String> findSupermarketWithCheapestPriceForEachProduct() {
         List<String> listOfSupermarketWithCheapestPriceForEachProduct = new ArrayList<>();
+
         listOfSupermarketWithCheapestPriceForEachProduct.add(Supermarket1.BREAD_UNIT_PRICE.getUnitPrice() > Supermarket2.BREAD_UNIT_PRICE.getUnitPrice() ? "Supermarket2" : "Supermarket1");
+
         listOfSupermarketWithCheapestPriceForEachProduct.add(Supermarket1.RICE_UNIT_PRICE.getUnitPrice() > Supermarket2.RICE_UNIT_PRICE.getUnitPrice() ? "Supermarket2" : "Supermarket1");
+
+
         listOfSupermarketWithCheapestPriceForEachProduct.add(Supermarket1.SUGAR_UNIT_PRICE.getUnitPrice() > Supermarket2.SUGAR_UNIT_PRICE.getUnitPrice() ? "Supermarket2" : "Supermarket1");
 
         return listOfSupermarketWithCheapestPriceForEachProduct;
@@ -24,15 +28,23 @@ public class Supermarket {
     public String findSupermarketWithCheapestPriceForAllProducts() {
 
         double totalPriceOfProductsFromSupermarket1 =
-                bread.selectQuantity() * Supermarket1.BREAD_UNIT_PRICE.getUnitPrice() +
-                        rice.selectQuantity() * Supermarket1.RICE_UNIT_PRICE.getUnitPrice() +
-                        sugar.selectQuantity() * Supermarket1.SUGAR_UNIT_PRICE.getUnitPrice();
+                calculateTotalPriceOfProductsFromSupermarket1();
 
         double totalPriceOfProductsFromSupermarket2 =
-                bread.selectQuantity() * Supermarket2.BREAD_UNIT_PRICE.getUnitPrice() +
-                        rice.selectQuantity() * Supermarket2.RICE_UNIT_PRICE.getUnitPrice() +
-                        sugar.selectQuantity() * Supermarket2.SUGAR_UNIT_PRICE.getUnitPrice();
+                calculateTotalPriceOfProductsFromSupermarket2();
 
         return (totalPriceOfProductsFromSupermarket1 < totalPriceOfProductsFromSupermarket2 ? "Supermarket1" : "Supermarket2");
+    }
+
+    private double calculateTotalPriceOfProductsFromSupermarket2() {
+        return bread.selectQuantity() * Supermarket2.BREAD_UNIT_PRICE.getUnitPrice() +
+                rice.selectQuantity() * Supermarket2.RICE_UNIT_PRICE.getUnitPrice() +
+                sugar.selectQuantity() * Supermarket2.SUGAR_UNIT_PRICE.getUnitPrice();
+    }
+
+    private double calculateTotalPriceOfProductsFromSupermarket1() {
+        return bread.selectQuantity() * Supermarket1.BREAD_UNIT_PRICE.getUnitPrice() +
+                rice.selectQuantity() * Supermarket1.RICE_UNIT_PRICE.getUnitPrice() +
+                sugar.selectQuantity() * Supermarket1.SUGAR_UNIT_PRICE.getUnitPrice();
     }
 }
