@@ -41,9 +41,9 @@ public class supermarketTest {
         Sugar sugar = new Sugar(5);
         Supermarket supermarket = new Supermarket(bread, rice, sugar);
 
-        double cheapestPrice = supermarket.calculateCheapestPriceOfProductsIncludingServicecharge();
+        double cheapestPrice = supermarket.calculateCheapestPriceOfProductsIncludingServiceCharge();
 
-        assertEquals(883, cheapestPrice);
+        assertEquals(913, cheapestPrice);
 
     }
 }
