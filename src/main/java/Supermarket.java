@@ -36,7 +36,14 @@ public class Supermarket {
         return (totalPriceOfProductsFromSupermarket1 < totalPriceOfProductsFromSupermarket2 ? "Supermarket1" : "Supermarket2");
     }
 
-    public double calculateCheapestPriceOfProductsIncludingServicecharge() {
-        return 0;
+    public double calculateCheapestPriceOfProductsIncludingServiceCharge() {
+
+        double totalPriceOfProductsFromSupermarket1 = Supermarket1.calculateTotalPriceOfProductsIncludingServiceChargeFromSupermarket1(bread.selectQuantity(), rice.selectQuantity(), sugar.selectQuantity());
+
+        double totalPriceOfProductsFromSupermarket2 = Supermarket2.calculateTotalPriceOfProductsIncludingServiceChargeFromSupermarket2(bread.selectQuantity(), rice.selectQuantity(), sugar.selectQuantity());
+
+        return (totalPriceOfProductsFromSupermarket1 < totalPriceOfProductsFromSupermarket2 ?
+                totalPriceOfProductsFromSupermarket1 : totalPriceOfProductsFromSupermarket2);
+
     }
 }
