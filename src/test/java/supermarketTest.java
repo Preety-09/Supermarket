@@ -9,9 +9,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class supermarketTest {
     @Test
     void returnSupermarketThatProvidesCheapestPriceForEachProduct() {
-        Bread bread = new Bread(2);
-        Rice rice = new Rice(10);
-        Sugar sugar = new Sugar(5);
+        Product bread = Product.createBread(2);
+        Product rice = Product.createRice(10);
+        Product sugar = Product.createSugar(5);
         Supermarket supermarket = new Supermarket(bread, rice, sugar);
 
         List<String> listOfSupermarketWithCheapestPrice = supermarket.findSupermarketWithCheapestPriceForEachProduct();
