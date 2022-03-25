@@ -2,11 +2,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Supermarket {
-    private final Bread bread;
-    private final Rice rice;
-    private final Sugar sugar;
+    private final Product bread;
+    private final Product rice;
+    private final Product sugar;
 
-    public Supermarket(Bread bread, Rice rice, Sugar sugar) {
+    public Supermarket(Product bread, Product rice, Product sugar) {
         this.bread = bread;
         this.rice = rice;
         this.sugar = sugar;
