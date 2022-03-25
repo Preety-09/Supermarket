@@ -18,7 +18,7 @@ public enum Supermarket1 {
 
     public static double calculateTotalPriceOfProductsIncludingServiceChargeFromSupermarket1(double bread_quantity, double rice_quantity, double sugar_quantity) {
         return (calculateTotalPriceOfProductsFromSupermarket1(bread_quantity, rice_quantity, sugar_quantity) +
-                   (calculateTotalPriceOfProductsFromSupermarket1(bread_quantity, rice_quantity, sugar_quantity) * SUPERMARKET1_SERVICE_CHARGE.getUnitPrice()));
+                (calculateTotalPriceOfProductsFromSupermarket1(bread_quantity, rice_quantity, sugar_quantity) * SUPERMARKET1_SERVICE_CHARGE.getUnitPrice()));
     }
 
     public double getUnitPrice() {

@@ -1,3 +1,5 @@
+import com.tw.supermarket.Product;
+import com.tw.supermarket.Supermarket;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -15,7 +17,7 @@ public class supermarketTest {
         Supermarket supermarket = new Supermarket(bread, rice, sugar);
 
         List<String> listOfSupermarketWithCheapestPrice = supermarket.findSupermarketWithCheapestPriceForEachProduct();
-        List<String> expectedListOfSupermarketWithCheapestPrice = Arrays.asList("Supermarket2", "Supermarket1", "Supermarket1");
+        List<String> expectedListOfSupermarketWithCheapestPrice = Arrays.asList("com.tw.supermarket.Supermarket2", "com.tw.supermarket.Supermarket1", "com.tw.supermarket.Supermarket1");
 
         assertEquals(expectedListOfSupermarketWithCheapestPrice, listOfSupermarketWithCheapestPrice);
 
@@ -30,7 +32,7 @@ public class supermarketTest {
 
         String supermarketWithCheapestPriceForAllProducts = supermarket.findSupermarketWithCheapestPriceForAllProducts();
 
-        assertThat(supermarketWithCheapestPriceForAllProducts, is("Supermarket1"));
+        assertThat(supermarketWithCheapestPriceForAllProducts, is("com.tw.supermarket.Supermarket1"));
 
     }
 
