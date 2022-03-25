@@ -1,4 +1,4 @@
 package com.tw.supermarket.exceptions;
 
-public class NegativeQunatityNotAllowedException extends Exception{
+public class NegativeQuantityNotAllowedException extends Exception{
 }
