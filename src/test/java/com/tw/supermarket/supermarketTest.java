@@ -1,16 +1,20 @@
+package com.tw.supermarket;
+
 import com.tw.supermarket.Product;
 import com.tw.supermarket.Supermarket;
+import com.tw.supermarket.exceptions.NegativeQuantityNotAllowedException;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class supermarketTest {
     @Test
-    void returnSupermarketThatProvidesCheapestPriceForEachProduct() {
+    void returnSupermarketThatProvidesCheapestPriceForEachProduct() throws NegativeQuantityNotAllowedException {
         Product bread = Product.createBread(2);
         Product rice = Product.createRice(10);
         Product sugar = Product.createSugar(5);
@@ -24,7 +28,7 @@ public class supermarketTest {
     }
 
     @Test
-    void returnSupermarketThatProvidesCheapestPriceForAllProducts() {
+    void returnSupermarketThatProvidesCheapestPriceForAllProducts() throws NegativeQuantityNotAllowedException {
         Product bread = Product.createBread(2);
         Product rice = Product.createRice(10);
         Product sugar = Product.createSugar(5);
@@ -37,7 +41,7 @@ public class supermarketTest {
     }
 
     @Test
-    void returnSuperMarketThatProvidesCheapestPriceForAllProductsIncludingServiceCharges() {
+    void returnSuperMarketThatProvidesCheapestPriceForAllProductsIncludingServiceCharges() throws NegativeQuantityNotAllowedException {
         Product bread = Product.createBread(2);
         Product rice = Product.createRice(10);
         Product sugar = Product.createSugar(5);
